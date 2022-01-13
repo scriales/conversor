@@ -3,6 +3,7 @@ package bo.edu.uap.utils;
 public class Persona {
     private String nombre;
     private int edad;
+    private String propiedad;
 
     public String getNombre() {
         return nombre;
@@ -18,5 +19,13 @@ public class Persona {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public String getPropiedad() {
+        return propiedad;
+    }
+
+    public void setPropiedad(String propiedad) {
+        this.propiedad = propiedad;
     }
 }
