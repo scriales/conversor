@@ -19,7 +19,7 @@ public class App
     {
         System.out.println( "Convirtiendo objeto a JSON..." );
         Properties properties = new Properties();
-        properties.load(new FileInputStream(new File("src/main/resources/vars.properties")));
+        properties.load(App.class.getClassLoader().getResourceAsStream("vars.properties"));
         Persona persona = new Persona();
         persona.setNombre("Pedro Perez");
         persona.setEdad(14);
