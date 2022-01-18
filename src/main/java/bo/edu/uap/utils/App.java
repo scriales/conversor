@@ -28,4 +28,11 @@ public class App
         String resultado = mapper.writeValueAsString(persona);
         System.out.println(resultado);
     }
+
+    public String obtenerJson(Persona persona) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        String resultado = mapper.writeValueAsString(persona);
+        
+        return resultado;
+    }
 }

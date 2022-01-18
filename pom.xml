@@ -29,8 +29,20 @@
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>2.11.1</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
+
+<distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+   </snapshotRepository>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+   </repository>
+</distributionManagement>
 
   <profiles>
     <profile>
@@ -48,6 +60,14 @@
       </properties>
     </profile>
   </profiles>
+
+  <repositories>
+    <repository>
+      <id>nexus</id>
+      <url>http://localhost:8081/repository/maven-central/</url>
+    </repository>
+  </repositories>
+
   <build>
     <plugins>
       <plugin>
