@@ -24,3 +24,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Listar directorios
+      run: ls -la
+    - name: Subiendo artefacto generado
+      uses: actions/upload-artifact@v2
+      with:
+        name: mijar
+        path: target/conversor-1.0-SNAPSHOT.jar
